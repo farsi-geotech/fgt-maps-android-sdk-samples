@@ -1,7 +1,7 @@
-# TPL Maps Android SDK
+# FGT Maps Android SDK
 
 ## Overview
-A Native Android SDK to integrate 3D Vector Maps, Places & Routing API in your Android Application Project.
+A Native Android SDK to integrate 3D Vector Maps, Places & Directions API in your Android Application Project.
 
 > The project is tested on Android Studio versions 3.3, 3.3.1 & 3.4.2 - if you have issues building it, please upgrade to one of these versions.
 
@@ -18,7 +18,7 @@ A Native Android SDK to integrate 3D Vector Maps, Places & Routing API in your A
 ## Features:
 - [**Maps API**](/docs/Maps.md)
 - [**Places API**](/docs/Places.md)
-- [**Routing API**](/docs/Routing.md)
+- [**Directions API**](/docs/Routing.md)
 
 ### Screenshot
 <p float="left">
@@ -39,9 +39,9 @@ A Native Android SDK to integrate 3D Vector Maps, Places & Routing API in your A
 Muhammad Hassan Jamil  (Team Lead Android Development - TPL Maps - hassan.jamil@tplmaps.com)
 
 ### Developer guide
-You can find a brief developer guide [here] (https://api.tplmaps.com/android-doc/)
+You can find a brief developer guide [here] (Link)
 
 ## API Documentation
-You can find API Documentation from [here](https://api.tplmaps.com/apiportal/#/portal/sdk-doc)
+You can find API Documentation from [here](Link)
  
 ## [FAQs](/docs/FAQs.md)
