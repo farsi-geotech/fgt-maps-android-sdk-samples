@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TPLMapsAndroidSdkSamples.iml" filepath="$PROJECT_DIR$/TPLMapsAndroidSdkSamples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FGTMapsAndroidSdkSamples.iml" filepath="$PROJECT_DIR$/FGTMapsAndroidSdkSamples.iml" />
       <module fileurl="file://$PROJECT_DIR$/samples/samples.iml" filepath="$PROJECT_DIR$/samples/samples.iml" />
     </modules>
   </component>
