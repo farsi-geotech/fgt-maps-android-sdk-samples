@@ -1,11 +1,11 @@
 
-package com.tplmaps.android.sdk.samples.utils;
+package com.fgtmaps.android.sdk.samples.utils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.Base64;
 
-import com.tplmaps.android.sdk.samples.constants.SecurityConstants;
+import com.fgtmaps.android.sdk.samples.constants.SecurityConstants;
 
 import java.util.Arrays;
 

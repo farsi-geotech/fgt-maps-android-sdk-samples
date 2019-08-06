@@ -1,4 +1,4 @@
-package com.tplmaps.android.sdk.samples.activities;
+package com.fgtmaps.android.sdk.samples.activities;
 
 import android.graphics.PointF;
 import android.os.Bundle;
@@ -7,8 +7,8 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
 
-import com.tplmaps.android.R;
-import com.tplmaps.android.sdk.samples.utils.MapUtils;
+import com.fgtmaps.android.sdk.samples.R;
+import com.fgtmaps.android.sdk.samples.utils.MapUtils;
 import com.tplmaps3d.LngLat;
 import com.tplmaps3d.MapController;
 import com.tplmaps3d.MapView;
@@ -32,51 +32,51 @@ public class ActivityMapGestures extends AppCompatActivity implements MapView.On
         setContentView(R.layout.activity_map_gestures);
 
         // Initializing and getting MapView resource
-        mMapView = (MapView) findViewById(R.id.map);
+        mMapView = findViewById(R.id.map);
         // Loading map Asynchronously
         MapUtils.initAndLoadMaps(savedInstanceState, mMapView, this);
 
 
-        tvListener = (TextView) findViewById(R.id.tv_listener);
-        tvValues = (TextView) findViewById(R.id.tv_value);
+        tvListener = findViewById(R.id.tv_listener);
+        tvValues = findViewById(R.id.tv_value);
 
-        CheckBox cbDoubleTapZoomGesture = ((CheckBox) findViewById(R.id.cb_dtzl));
+        CheckBox cbDoubleTapZoomGesture = findViewById(R.id.cb_dtzl);
         cbDoubleTapZoomGesture.setChecked(true);
         cbDoubleTapZoomGesture.setOnCheckedChangeListener(this);
 
-        CheckBox cbMapAllGestures = ((CheckBox) findViewById(R.id.cb_mag));
+        CheckBox cbMapAllGestures = findViewById(R.id.cb_mag);
         cbMapAllGestures.setChecked(true);
         cbMapAllGestures.setOnCheckedChangeListener(this);
 
-        CheckBox cbClick = ((CheckBox) findViewById(R.id.cb_click));
+        CheckBox cbClick = findViewById(R.id.cb_click);
         cbClick.setChecked(false);
         cbClick.setOnCheckedChangeListener(this);
 
-        CheckBox cbClickDouble = ((CheckBox) findViewById(R.id.cb_click_double));
+        CheckBox cbClickDouble = findViewById(R.id.cb_click_double);
         cbClickDouble.setChecked(false);
         cbClickDouble.setOnCheckedChangeListener(this);
 
-        CheckBox cbClickLong = ((CheckBox) findViewById(R.id.cb_click_long));
+        CheckBox cbClickLong = findViewById(R.id.cb_click_long);
         cbClickLong.setChecked(false);
         cbClickLong.setOnCheckedChangeListener(this);
 
-        CheckBox cbGesturePan = ((CheckBox) findViewById(R.id.cb_gesture_pan));
+        CheckBox cbGesturePan = findViewById(R.id.cb_gesture_pan);
         cbGesturePan.setChecked(false);
         cbGesturePan.setOnCheckedChangeListener(this);
 
-        CheckBox cbGestureRotate = ((CheckBox) findViewById(R.id.cb_gestures_rotate));
+        CheckBox cbGestureRotate = findViewById(R.id.cb_gestures_rotate);
         cbGestureRotate.setChecked(false);
         cbGestureRotate.setOnCheckedChangeListener(this);
 
-        CheckBox cbGestureScale = ((CheckBox) findViewById(R.id.cb_gesture_scale));
+        CheckBox cbGestureScale = findViewById(R.id.cb_gesture_scale);
         cbGestureScale.setChecked(false);
         cbGestureScale.setOnCheckedChangeListener(this);
 
-        CheckBox cbGestureShove = ((CheckBox) findViewById(R.id.cb_gesture_shove));
+        CheckBox cbGestureShove = findViewById(R.id.cb_gesture_shove);
         cbGestureShove.setChecked(false);
         cbGestureShove.setOnCheckedChangeListener(this);
 
-        CheckBox cbClickPOI = ((CheckBox) findViewById(R.id.cb_click_poi));
+        CheckBox cbClickPOI = findViewById(R.id.cb_click_poi);
         cbClickPOI.setChecked(false);
         cbClickPOI.setOnCheckedChangeListener(this);
     }
@@ -98,6 +98,7 @@ public class ActivityMapGestures extends AppCompatActivity implements MapView.On
 
         mapController.setPickRadius(getResources().getInteger(R.integer.pick_radius));
 
+        // DEFAULT SETTINGS
         // Loading Default Map Controls
         mapController.getLocationConfig()
                 .setLocationSettings(true)
@@ -107,6 +108,10 @@ public class ActivityMapGestures extends AppCompatActivity implements MapView.On
                                 " precise and accurate location on map");
         mapController.getUiSettings().showZoomControls(true);
         mapController.getUiSettings().showMyLocationButton(true);
+        // Zoom to default location
+        mapController.setLngLatZoom(new LngLat(44.428663, 25.007969), 5f);
+        // Setting map max tilt value
+        mapController.setMaxTilt(85);
 
         // TODO: Map loaded and ready, write your map tasks here
     }
@@ -267,7 +272,7 @@ public class ActivityMapGestures extends AppCompatActivity implements MapView.On
                             LngLat lngLat = mMapController.screenPositionToLngLat(new PointF((float) place.lngLat.longitude,
                                     (float) place.lngLat.latitude));
                             tvListener.setText(getString(R.string.click_poi));
-                            tvValues.setText(place.name + ", " + roundDecimalsUpto(lngLat.latitude, 4)
+                            tvValues.setText(place.nameEn + ", " + roundDecimalsUpto(lngLat.latitude, 4)
                                     + ", " + roundDecimalsUpto(lngLat.longitude, 4));
                         }
                     } : null);

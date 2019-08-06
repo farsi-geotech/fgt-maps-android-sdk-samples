@@ -1,4 +1,4 @@
-package com.tplmaps.android.sdk.samples.activities;
+package com.fgtmaps.android.sdk.samples.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -9,12 +9,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-import com.tplmaps.android.R;
-import com.tplmaps.android.sdk.samples.constants.URLConstants;
-import com.tplmaps.sdk.places.OnSearchResult;
-import com.tplmaps.sdk.places.Params;
-import com.tplmaps.sdk.places.Place;
-import com.tplmaps.sdk.places.SearchManager;
+import com.fgtmaps.android.sdk.samples.R;
+import com.fgtmaps.sdk.places.OnSearchResult;
+import com.fgtmaps.sdk.places.Params;
+import com.fgtmaps.sdk.places.Place;
+import com.fgtmaps.sdk.places.SearchManager;
 import com.tplmaps3d.sdk.utils.CommonUtils;
 
 import java.text.SimpleDateFormat;
@@ -42,8 +41,6 @@ public class ActivitySearch extends AppCompatActivity implements OnSearchResult 
         searchManager.setListener(this);
 
         setViews();
-
-        searchManager.onCreate();
     }
 
     @Override
@@ -86,13 +83,14 @@ public class ActivitySearch extends AppCompatActivity implements OnSearchResult 
 
     ArrayList<String> strResults;
     ArrayAdapter<String> adapter;
+
     void populateListView(ArrayList<Place> results) {
         if (results == null)
             return;
 
         strResults = new ArrayList<>();
         for (Place place : results) {
-            strResults.add(place.getName());
+            strResults.add(place.getName_en());
         }
 
         adapter = new ArrayAdapter<>(this,
@@ -101,11 +99,11 @@ public class ActivitySearch extends AppCompatActivity implements OnSearchResult 
     }
 
     void clearList() {
-        if(strResults != null)
+        if (strResults != null)
             strResults.clear();
-        if(adapter != null && strResults != null && strResults.size() > 0)
+        if (adapter != null && strResults != null && strResults.size() > 0)
             adapter.clear();
-        if(adapter != null)
+        if (adapter != null)
             adapter.notifyDataSetChanged();
     }
 

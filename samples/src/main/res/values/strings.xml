@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TPL Maps SDK Samples</string>
+    <string name="app_name">FGT Maps SDK Samples</string>
     <string name="maps">Maps</string>
     <string name="compass">Compass</string>
     <string name="zoom_controls">Zoom Controls</string>

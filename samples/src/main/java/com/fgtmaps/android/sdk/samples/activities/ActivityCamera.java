@@ -1,4 +1,4 @@
-package com.tplmaps.android.sdk.samples.activities;
+package com.fgtmaps.android.sdk.samples.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -6,13 +6,14 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.tplmaps.android.R;
-import com.tplmaps.android.sdk.samples.utils.MapUtils;
+import com.fgtmaps.android.sdk.samples.R;
+import com.fgtmaps.android.sdk.samples.utils.MapUtils;
 import com.tplmaps3d.CameraPosition;
 import com.tplmaps3d.LngLat;
 import com.tplmaps3d.MapController;
 import com.tplmaps3d.MapView;
 import com.tplmaps3d.sdk.model.Bounds;
+
 
 public class ActivityCamera extends AppCompatActivity implements MapView.OnMapReadyCallback,
         MapController.OnCameraChangeStartedListener, MapController.OnCameraChangeListener,
@@ -27,19 +28,21 @@ public class ActivityCamera extends AppCompatActivity implements MapView.OnMapRe
         setContentView(R.layout.activity_camera);
 
         // Initializing and getting MapView resource
-        mMapView = (MapView) findViewById(R.id.map);
+        mMapView = findViewById(R.id.map);
 
-        Button button = (Button) findViewById(R.id.button);
+        Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (mMapView.getMapController() == null)
                     return;
 
-                // Zoom camera to bounds of Sector I-10, Islamabad with animation
+                // Zoom camera to extent(bounding box) of Mecca City(Saudi Arabia) with animation
+                // BoundingBox needs two location points south-west and north-east respectively
+                // to zoom on an extent
                 mMapView.getMapController().setBounds(
-                        new Bounds(new LngLat(73.035070, 33.637313),
-                                new LngLat(73.041247, 33.659408)), 200, 1000);
+                        new Bounds(new LngLat(39.763722, 21.344798),
+                                new LngLat(39.907718, 21.473638)), 200, 2000);
 
                 // Zoom to area bound in a rect specified on screen
                 /*mMapView.getMapController().setBoundsInWindow(
@@ -110,16 +113,17 @@ public class ActivityCamera extends AppCompatActivity implements MapView.OnMapRe
         mapController.setOnCameraChangeListener(this);
         mapController.setOnCameraChangeEndListener(this);
 
-        // Setting map max tilt value
-        mapController.setMaxTilt(85);
-
-        // Applying animation to map camera
+        // Tilted Zoom on Kaaba's location
         mapController.animateCamera(CameraPosition.builder(mapController)
-                .position(new LngLat(73.0684356, 33.6934396))
-                .zoom(18.3f)
-                .rotation(13.0F)
+                .position(new LngLat(39.826185, 21.422509))
+                .zoom(17f)
+                .tilt(0.5f)
                 .build(), 2000);
 
+
+        // DEFAULT/SAMPLE SETTINGS
+        // Setting map max tilt value
+        mapController.setMaxTilt(85);
         // Loading Default Map Controls
         mapController.getLocationConfig()
                 .setLocationSettings(true)

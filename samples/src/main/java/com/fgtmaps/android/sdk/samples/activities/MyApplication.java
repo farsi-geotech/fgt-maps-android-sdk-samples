@@ -1,9 +1,9 @@
-package com.tplmaps.android.sdk.samples.activities;
+package com.fgtmaps.android.sdk.samples.activities;
 
 import android.app.Application;
 import android.content.Context;
 
-import com.tplmaps.android.R;
+import com.fgtmaps.android.sdk.samples.R;
 
 import org.acra.ACRA;
 import org.acra.ReportingInteractionMode;

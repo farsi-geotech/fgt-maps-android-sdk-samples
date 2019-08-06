@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.tplmaps.android">
+    package="com.fgtmaps.android.sdk.samples">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
-        android:name=".sdk.samples.activities.MyApplication"
+        android:name=".activities.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -19,7 +19,7 @@
             android:required="false" />
 
         <activity
-            android:name=".sdk.samples.activities.ActivityMain"
+            android:name=".activities.ActivityMain"
             android:configChanges="screenSize|orientation"
             android:label="@string/app_name">
             <intent-filter>
@@ -29,59 +29,59 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".sdk.samples.activities.ActivityMaps"
+            android:name=".activities.ActivityMaps"
             android:configChanges="screenSize|orientation"
             android:label="@string/maps"
-            android:parentActivityName=".sdk.samples.activities.ActivityMain" />
+            android:parentActivityName=".activities.ActivityMain" />
         <activity
-            android:name=".sdk.samples.activities.ActivityUIControls"
+            android:name=".activities.ActivityUIControls"
             android:configChanges="screenSize|orientation"
             android:label="@string/ui_controls"
-            android:parentActivityName=".sdk.samples.activities.ActivityMain" />
+            android:parentActivityName=".activities.ActivityMain" />
         <activity
-            android:name=".sdk.samples.activities.ActivityShapes"
+            android:name=".activities.ActivityShapes"
             android:configChanges="screenSize|orientation"
             android:label="@string/shapes"
-            android:parentActivityName=".sdk.samples.activities.ActivityMain" />
+            android:parentActivityName=".activities.ActivityMain" />
         <activity
-            android:name=".sdk.samples.activities.ActivityInfoWindows"
+            android:name=".activities.ActivityInfoWindows"
             android:configChanges="screenSize|orientation"
             android:label="@string/info_window"
-            android:parentActivityName=".sdk.samples.activities.ActivityMain" />
+            android:parentActivityName=".activities.ActivityMain" />
         <activity
-            android:name=".sdk.samples.activities.ActivityMapGestures"
+            android:name=".activities.ActivityMapGestures"
             android:configChanges="screenSize|orientation"
             android:label="@string/map_features_gestures"
-            android:parentActivityName=".sdk.samples.activities.ActivityMain" />
+            android:parentActivityName=".activities.ActivityMain" />
         <activity
-            android:name=".sdk.samples.activities.ActivitySearch"
+            android:name=".activities.ActivitySearch"
             android:configChanges="screenSize|orientation"
             android:label="@string/search"
-            android:parentActivityName=".sdk.samples.activities.ActivityMain" />
+            android:parentActivityName=".activities.ActivityMain" />
         <activity
-            android:name=".sdk.samples.activities.ActivityMapStyle"
+            android:name=".activities.ActivityMapStyle"
             android:configChanges="screenSize|orientation"
             android:label="@string/map_style"
-            android:parentActivityName=".sdk.samples.activities.ActivityMain" />
+            android:parentActivityName=".activities.ActivityMain" />
         <activity
-            android:name=".sdk.samples.activities.ActivityCamera"
+            android:name=".activities.ActivityCamera"
             android:configChanges="screenSize|orientation"
             android:label="@string/camera"
-            android:parentActivityName=".sdk.samples.activities.ActivityMain" />
+            android:parentActivityName=".activities.ActivityMain" />
         <activity
-            android:name=".sdk.samples.activities.ActivityMapFeatures"
+            android:name=".activities.ActivityMapFeatures"
             android:configChanges="screenSize|orientation"
             android:label="@string/map_features"
-            android:parentActivityName=".sdk.samples.activities.ActivityMain" />
+            android:parentActivityName=".activities.ActivityMain" />
         <activity
-            android:name=".sdk.samples.activities.ActivityRouting"
+            android:name=".activities.ActivityRouting"
             android:configChanges="screenSize|orientation"
             android:label="@string/routing"
-            android:parentActivityName=".sdk.samples.activities.ActivityMain" />
+            android:parentActivityName=".activities.ActivityMain" />
 
         <meta-data
             android:name="@string/metadata_name_api_key"
-            android:value="$2a$10$NEk1VUzWe1OlWxUxefjeiOxeeYeZA4W6U18CplzKhkvPAdUAqfDlD" />
+            android:value="$2a$10$oCE0TfvMYk3vUy021LuAYOppG49khUg9c4mGU3zUflLGRDm8oDwh2" />
     </application>
 
 </manifest>

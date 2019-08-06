@@ -10,11 +10,11 @@
 		"visible": "true"
 	}
   },{
-    "featureType": "map.buildings",
-	"styler": {
-		"visible": "true"
-	}
-  },{
+    "featureType": "map.traffic",
+   	"styler": {
+   		"visible": "true"
+    }
+    },{
     "featureType": "road.motorway",
     "styler": {
 		"color": "'#4194f4'",

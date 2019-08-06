@@ -1,4 +1,4 @@
-package com.tplmaps.android.sdk.samples.activities;
+package com.fgtmaps.android.sdk.samples.activities;
 
 import android.graphics.Point;
 import android.graphics.drawable.Drawable;
@@ -10,8 +10,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.tplmaps.android.R;
-import com.tplmaps.android.sdk.samples.utils.MapUtils;
+import com.fgtmaps.android.sdk.samples.R;
+import com.fgtmaps.android.sdk.samples.utils.MapUtils;
 import com.tplmaps3d.IconFactory;
 import com.tplmaps3d.LngLat;
 import com.tplmaps3d.MapController;
@@ -19,10 +19,9 @@ import com.tplmaps3d.MapView;
 import com.tplmaps3d.Marker;
 import com.tplmaps3d.MarkerOptions;
 
-
 public class ActivityInfoWindows extends AppCompatActivity implements MapView.OnMapReadyCallback {
 
-    private static final String TAG = ActivityMaps.class.getSimpleName();
+    private static final String TAG = com.fgtmaps.android.sdk.samples.activities.ActivityMaps.class.getSimpleName();
 
     private MapView mMapView;
     private MapController mMapController;
@@ -71,7 +70,7 @@ public class ActivityInfoWindows extends AppCompatActivity implements MapView.On
     protected void onDestroy() {
         super.onDestroy();
 
-        if(mMapView != null)
+        if (mMapView != null)
             mMapView.onDestroy();
     }
 
@@ -165,6 +164,7 @@ public class ActivityInfoWindows extends AppCompatActivity implements MapView.On
     }
 
     Marker marker3, marker4;
+
     private void customInfoWindowsMultipleViews() {
 
         // Set different custom views to different info windows
@@ -191,14 +191,14 @@ public class ActivityInfoWindows extends AppCompatActivity implements MapView.On
         mMapController.setCustomInfoWindow(new MapController.CustomInfoWindow() {
             @Override
             public View onInfoWindow(Marker tplMarker) {
-                if(tplMarker == marker3)
+                if (tplMarker == marker3)
                     return prepareInfoView(tplMarker);
                 return null;
             }
 
             @Override
             public View onInfoWindowContent(Marker tplMarker) {
-                if(tplMarker == marker4)
+                if (tplMarker == marker4)
                     return prepareInfoView(tplMarker);
                 return null;
             }

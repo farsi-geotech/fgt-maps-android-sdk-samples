@@ -1,4 +1,4 @@
-package com.tplmaps.android.sdk.samples.utils;
+package com.fgtmaps.android.sdk.samples.utils;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,16 +9,15 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
-import com.tplmaps.android.R;
-import com.tplmaps.android.sdk.samples.constants.SecurityConstants;
+import com.fgtmaps.android.sdk.samples.R;
+import com.fgtmaps.android.sdk.samples.constants.SecurityConstants;
 
 
 public class CommonUtilities {
 
     //private static final String TAG = CommonUtilities.class.getSimpleName();
 
-    private static Toast toastShort;
-    private static Toast toastlong;
+    private static Toast toast;
 
     /**
      * Shows toast for short duration
@@ -27,10 +26,10 @@ public class CommonUtilities {
         if (context == null)
             return;
 
-        if (toastShort != null)
-            toastShort.cancel();
-        toastShort = Toast.makeText(context, msg, Toast.LENGTH_SHORT);
-        toastShort.show();
+        if (toast != null)
+            toast.cancel();
+        toast = Toast.makeText(context, msg, Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     /**
@@ -40,10 +39,10 @@ public class CommonUtilities {
         if (context == null)
             return;
 
-        if (toastlong != null)
-            toastlong.cancel();
-        toastlong = Toast.makeText(context, msg, Toast.LENGTH_LONG);
-        toastlong.show();
+        if (toast != null)
+            toast.cancel();
+        toast = Toast.makeText(context, msg, Toast.LENGTH_LONG);
+        toast.show();
     }
 
 

@@ -1,12 +1,13 @@
-package com.tplmaps.android.sdk.samples.activities;
+package com.fgtmaps.android.sdk.samples.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
-import com.tplmaps.android.R;
-import com.tplmaps.android.sdk.samples.utils.MapUtils;
+import com.fgtmaps.android.sdk.samples.R;
+import com.fgtmaps.android.sdk.samples.utils.MapUtils;
+import com.tplmaps3d.LngLat;
 import com.tplmaps3d.MapController;
 import com.tplmaps3d.MapMode;
 import com.tplmaps3d.MapView;
@@ -19,7 +20,7 @@ public class ActivityMapFeatures extends AppCompatActivity implements MapView.On
     private MapView mMapView;
 
     final boolean ENABLE_NIGHT_MODE_DEFAULT = false;
-    final boolean ENABLE_BUILDINGS_DEFAULT = true;
+    //final boolean ENABLE_BUILDINGS_DEFAULT = true;
     final boolean ENABLE_POIS_DEFAULT = true;
     final boolean ENABLE_TRAFFIC_DEFAULT = true;
 
@@ -29,27 +30,27 @@ public class ActivityMapFeatures extends AppCompatActivity implements MapView.On
         setContentView(R.layout.activity_map_features);
 
         // Initializing and getting MapView resource
-        mMapView = (MapView) findViewById(R.id.map);
+        mMapView = findViewById(R.id.map);
 
-        CheckBox cbNightMode = ((CheckBox) findViewById(R.id.cb_night_mode));
+        CheckBox cbNightMode = findViewById(R.id.cb_night_mode);
         cbNightMode.setOnCheckedChangeListener(this);
         cbNightMode.setChecked(ENABLE_NIGHT_MODE_DEFAULT);
         // Setting Night Mode as default
         onCheckedChanged(cbNightMode, ENABLE_NIGHT_MODE_DEFAULT);
 
-        CheckBox cbBuildings = ((CheckBox) findViewById(R.id.cb_buildings));
+        /*CheckBox cbBuildings = findViewById(R.id.cb_buildings);
         cbBuildings.setOnCheckedChangeListener(this);
         cbBuildings.setChecked(ENABLE_BUILDINGS_DEFAULT);
         // Setting Buildings as default
-        onCheckedChanged(cbBuildings, ENABLE_BUILDINGS_DEFAULT);
+        onCheckedChanged(cbBuildings, ENABLE_BUILDINGS_DEFAULT);*/
 
-        CheckBox cbPOIs = ((CheckBox) findViewById(R.id.cb_pois));
+        CheckBox cbPOIs = findViewById(R.id.cb_pois);
         cbPOIs.setOnCheckedChangeListener(this);
         cbPOIs.setChecked(ENABLE_POIS_DEFAULT);
         // Setting POIs as default
         onCheckedChanged(cbPOIs, ENABLE_POIS_DEFAULT);
 
-        CheckBox cbTraffic = ((CheckBox) findViewById(R.id.cb_traffic));
+        CheckBox cbTraffic = findViewById(R.id.cb_traffic);
         cbTraffic.setOnCheckedChangeListener(this);
         cbTraffic.setChecked(ENABLE_TRAFFIC_DEFAULT);
         // Setting POIs as default
@@ -127,6 +128,11 @@ public class ActivityMapFeatures extends AppCompatActivity implements MapView.On
                                 " precise and accurate location on map");
         mapController.getUiSettings().showZoomControls(true);
         mapController.getUiSettings().showMyLocationButton(true);
+
+        // Zoom to default location
+        mapController.setLngLatZoom(new LngLat(39.168926, 21.506630), 15f);
+        // Setting map max tilt value
+        mapController.setMaxTilt(85);
     }
 
     @Override
@@ -138,9 +144,9 @@ public class ActivityMapFeatures extends AppCompatActivity implements MapView.On
                 mMapView.setMapMode((checked) ? MapMode.NIGHT : MapMode.DEFAULT);
                 break;
 
-            case R.id.cb_buildings:
+            /*case R.id.cb_buildings:
                 mMapView.setBuildingsEnabled(checked);
-                break;
+                break;*/
 
             case R.id.cb_pois:
                 mMapView.setPOIsEnabled(checked);

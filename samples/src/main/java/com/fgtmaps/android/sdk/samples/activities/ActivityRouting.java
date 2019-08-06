@@ -1,17 +1,17 @@
-package com.tplmaps.android.sdk.samples.activities;
+package com.fgtmaps.android.sdk.samples.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.tpl.maps.sdk.routing.IMapRoute;
-import com.tpl.maps.sdk.routing.TPLRouteConfig;
-import com.tpl.maps.sdk.routing.TPLRouteManager;
-import com.tpl.maps.sdk.routing.structures.Place;
-import com.tpl.maps.sdk.routing.structures.TPLRoute;
-import com.tpl.maps.sdk.routing.structures.TPLRouteDirection;
-import com.tplmaps.android.R;
+import com.fgt.maps.sdk.routing.IMapRoute;
+import com.fgt.maps.sdk.routing.TPLRouteConfig;
+import com.fgt.maps.sdk.routing.TPLRouteManager;
+import com.fgt.maps.sdk.routing.structures.Place;
+import com.fgt.maps.sdk.routing.structures.TPLRoute;
+import com.fgt.maps.sdk.routing.structures.TPLRouteDirection;
+import com.fgtmaps.android.sdk.samples.R;
 
 import java.util.ArrayList;
 
@@ -25,7 +25,6 @@ public class ActivityRouting extends AppCompatActivity {
         setContentView(R.layout.activity_routing);
 
         mRouteManager = new TPLRouteManager();
-        mRouteManager.onCreate(this);
     }
 
     public void calculateRoute(View v) {
@@ -35,14 +34,14 @@ public class ActivityRouting extends AppCompatActivity {
         ArrayList<Place> locations = new ArrayList<>();
         // Source location
         Place source = new Place();
-        source.setName("TPL Corp ISE Office");
-        source.setX(73.058382);
-        source.setY(33.711556);
+        source.setName("King Abdullah Bin Abdulaziz Square, Jeddah");
+        source.setX(39.170069);
+        source.setY(21.507161);
         // Destination Location
         Place destination = new Place();
-        destination.setName("TPL Maps Bahria Office");
-        destination.setX(73.094223);
-        destination.setY(33.522695);
+        destination.setName("Kudy, Makkah, Saudi Arabia");
+        destination.setX(39.839409);
+        destination.setY(21.390267);
 
         locations.add(source);
         locations.add(destination);

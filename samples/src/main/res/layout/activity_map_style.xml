@@ -4,7 +4,7 @@
     android:id="@+id/activity_map_style"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.tplmaps.android.sdk.samples.activities.ActivityMapStyle">
+    tools:context=".activities.ActivityMapStyle">
 
     <include layout="@layout/layout_map_view" />
 

@@ -1,4 +1,4 @@
-package com.tplmaps.android.sdk.samples.activities;
+package com.fgtmaps.android.sdk.samples.activities;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -6,15 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 
-import com.tplmaps.android.R;
-import com.tplmaps.android.sdk.samples.utils.MapUtils;
+import com.fgtmaps.android.sdk.samples.R;
+import com.fgtmaps.android.sdk.samples.utils.MapUtils;
+import com.tplmaps3d.LngLat;
 import com.tplmaps3d.MapController;
 import com.tplmaps3d.MapView;
 
 public class ActivityUIControls extends AppCompatActivity implements MapView.OnMapReadyCallback,
         CompoundButton.OnCheckedChangeListener {
-
-    private static final String TAG = ActivityUIControls.class.getSimpleName();
 
     private MapView mMapView;
 
@@ -29,7 +28,7 @@ public class ActivityUIControls extends AppCompatActivity implements MapView.OnM
 
         setContentView(R.layout.activity_ui_controls);
 
-        mMapView = (MapView) findViewById(R.id.map);
+        mMapView = findViewById(R.id.map);
         MapUtils.initAndLoadMaps(savedInstanceState, mMapView, this);
     }
 
@@ -95,14 +94,19 @@ public class ActivityUIControls extends AppCompatActivity implements MapView.OnM
 
         // Setting controls here because functionality of these controls belongs to the MapView
         // And MapView should be ready to perform these actions on it
-        CheckBox cbCompass = ((CheckBox) findViewById(R.id.cb_compass));
+        CheckBox cbCompass = findViewById(R.id.cb_compass);
         cbCompass.setOnCheckedChangeListener(this);
-        CheckBox cbZoomControls = ((CheckBox) findViewById(R.id.cb_zoom_controls));
+        CheckBox cbZoomControls = findViewById(R.id.cb_zoom_controls);
         cbZoomControls.setOnCheckedChangeListener(this);
-        CheckBox cbMyLocation = ((CheckBox) findViewById(R.id.cb_my_location));
+        CheckBox cbMyLocation = findViewById(R.id.cb_my_location);
         cbMyLocation.setOnCheckedChangeListener(this);
-        cbMyLocationButton = ((CheckBox) findViewById(R.id.cb_my_location_button));
+        cbMyLocationButton = findViewById(R.id.cb_my_location_button);
         cbMyLocationButton.setOnCheckedChangeListener(this);
+
+        // Zoom to default location
+        mapController.setLngLatZoom(new LngLat(44.428663, 25.007969), 5f);
+        // Setting map max tilt value
+        mapController.setMaxTilt(85);
     }
 
     @Override

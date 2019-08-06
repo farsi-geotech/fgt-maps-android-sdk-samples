@@ -1,4 +1,4 @@
-package com.tplmaps.android.sdk.samples.constants;
+package com.fgtmaps.android.sdk.samples.constants;
 
 /**
  * Take a look at this class every time when release.<br/>

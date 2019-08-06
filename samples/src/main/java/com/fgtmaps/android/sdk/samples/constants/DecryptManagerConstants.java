@@ -1,8 +1,8 @@
-package com.tplmaps.android.sdk.samples.constants;
+package com.fgtmaps.android.sdk.samples.constants;
 
 import android.content.Context;
 
-import com.tplmaps.android.sdk.samples.utils.CipherUtils;
+import com.fgtmaps.android.sdk.samples.utils.CipherUtils;
 
 @SuppressWarnings("FieldCanBeLocal")
 public class DecryptManagerConstants {

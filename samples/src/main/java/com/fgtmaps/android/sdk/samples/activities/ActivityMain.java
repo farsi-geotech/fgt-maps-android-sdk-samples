@@ -1,4 +1,4 @@
-package com.tplmaps.android.sdk.samples.activities;
+package com.fgtmaps.android.sdk.samples.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.tplmaps.android.R;
+import com.fgtmaps.android.sdk.samples.R;
 
 public class ActivityMain extends AppCompatActivity implements View.OnClickListener {
 

@@ -1,4 +1,4 @@
-package com.tplmaps.android.sdk.samples.utils;
+package com.fgtmaps.android.sdk.samples.utils;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

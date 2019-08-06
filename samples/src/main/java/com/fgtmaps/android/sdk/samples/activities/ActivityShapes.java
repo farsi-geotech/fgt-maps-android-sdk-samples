@@ -1,12 +1,12 @@
-package com.tplmaps.android.sdk.samples.activities;
+package com.fgtmaps.android.sdk.samples.activities;
 
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.tplmaps.android.R;
-import com.tplmaps.android.sdk.samples.utils.MapUtils;
+import com.fgtmaps.android.sdk.samples.R;
+import com.fgtmaps.android.sdk.samples.utils.MapUtils;
 import com.tplmaps3d.Circle;
 import com.tplmaps3d.CircleOptions;
 import com.tplmaps3d.IconFactory;
@@ -77,7 +77,7 @@ public class ActivityShapes extends AppCompatActivity implements MapView.OnMapRe
     protected void onDestroy() {
         super.onDestroy();
 
-        if(mMapView != null)
+        if (mMapView != null)
             mMapView.onDestroy();
     }
 
@@ -114,7 +114,7 @@ public class ActivityShapes extends AppCompatActivity implements MapView.OnMapRe
             @Override
             public void onPoiClick(PointOfInterest place) {
                 Log.i(TAG, "Called: onPoiClick id = " + place.id);
-                Log.i(TAG, "Called: onPoiClick tile = " + place.name);
+                Log.i(TAG, "Called: onPoiClick tile = " + place.nameEn);
                 Log.i(TAG, "Called: onPoiClick lnglat = " + place.lngLat.longitude + " , " + place.lngLat.latitude);
                 Log.i(TAG, " // /// ///// /// ");
             }
@@ -173,6 +173,7 @@ public class ActivityShapes extends AppCompatActivity implements MapView.OnMapRe
     }
 
     Marker marker1;
+
     private void addMarkers() {
 
         LngLat latLngISB = new LngLat(73.093104, 33.730494);
