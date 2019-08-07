@@ -127,10 +127,9 @@ public void onMapReady(final MapController mapController) {
     </intent-filter>
   </activity>
 
-
   <meta-data
-    android:name="com.tplmaps.android.sdk.API_KEY"
-    android:value="YOUR_API_KEY" />
+      android:name="com.fgtmaps.android.sdk.API_KEY"
+      android:value="$2a$10$oCE0TfvMYk3vUy021LuAYOppG49khUg9c4mGU3zUflLGRDm8oDwh2" />
 
 </application>
 
