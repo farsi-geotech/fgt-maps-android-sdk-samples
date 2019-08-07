@@ -58,8 +58,8 @@ public class ActivityMapFeatures extends AppCompatActivity implements MapView.On
 
         // OR you can make settings for map defaults by calling these methods before call to load maps
         /*mMapView.setMapMode(MapMode.DEFAULT);
-        mMapView.setBuildingsEnabled(true);
-        mMapView.setPOIsEnabled(true);*/
+        mMapView.setPOIsEnabled(true);
+        mMapView.setTrafficEnabled(true);*/
 
         // Loading map Asynchronously
         MapUtils.initAndLoadMaps(savedInstanceState, mMapView, this);

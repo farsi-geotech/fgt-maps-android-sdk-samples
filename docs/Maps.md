@@ -1,5 +1,5 @@
 # Setup Maps API
-To setup TPL Maps in your application follow these steps
+To setup FGT Maps in your application follow these steps
 1. Add the following configuration in project level `build.gradle`
 ``` groovy
 allprojects {
@@ -19,15 +19,22 @@ dependencies {
 ``` xml
 <uses-permission android:name="android.permission.INTERNET" />
 ```
-4. Configure API Key
-   - Create an account on [TPLMaps LBS Portal](https://api.tplmaps.com/apiportal).
+4. Place the below mentioned `<meta-data>` tag in your project’s `AndroidManifest.xml` under `<application>` tag
+``` xml
+<meta-data
+    android:name="com.fgtmaps.android.sdk.API_KEY"
+    android:value="$2a$10$oCE0TfvMYk3vUy021LuAYOppG49khUg9c4mGU3zUflLGRDm8oDwh2" />
+```
+
+<!--Configure API Key
+   - Create an account on [FGTMaps LBS Portal](https://api.tplmaps.com/apiportal).
    - Generate Android API Key through [Generate Key](https://api.tplmaps.com/apiportal/#/app/key-generation) option.
    - Copy the key put it into `<meta-data>` tag mentioned below and copy the tag in your project’s `AndroidManifest.xml` under `<application>` tag
 ``` xml
       <meta-data 
-        android:name="com.tplmaps.android.sdk.API_KEY"
+        android:name="com.fgtmaps.android.sdk.API_KEY"
         android:value="YOUR_API_KEY_HERE" />
-```
+``` -->
 5. Add `MapView` in your `layout.xml`
 ``` xml
 <com.tplmaps3d.MapView
@@ -111,7 +118,7 @@ public void onMapReady(final MapController mapController) {
   android:supportsRtl="true">
 
   <activity
-    android:name=".ActivityTPLMaps "
+    android:name=".ActivityMaps "
     android:configChanges="screenSize|orientation"
     android:label="@string/app_name">
     <intent-filter>
@@ -129,17 +136,17 @@ public void onMapReady(final MapController mapController) {
 
 </manifest>
 ```
-## ActivityTPLMaps.java
+## ActivityMaps.java
 ``` java
-public class ActivityTPLMaps extends AppCompatActivity implements MapView.OnMapReadyCallback {
+public class ActivityMaps extends AppCompatActivity implements MapView.OnMapReadyCallback {
 
-private static final String TAG = ActivityTPLMaps.class.getSimpleName();
+private static final String TAG = ActivityMaps.class.getSimpleName();
 private MapView mapView;
 
 @Override
 protected void onCreate(Bundle savedInstanceState) {
   super.onCreate(savedInstanceState);
-  setContentView(R.layout.layout_tpl_maps);
+  setContentView(R.layout.layout_maps);
 
   // Initializing and getting MapView resource
   mapView = (MapView) findViewById(R.id.map);
@@ -196,7 +203,7 @@ public void onMapReady(final MapController mapController) {
 }
 }
 ```
-## layout_tpl_maps.xml
+## layout_maps.xml
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayoutxmlns:android="http://schemas.android.com/apk/res/android"
@@ -213,8 +220,8 @@ public void onMapReady(final MapController mapController) {
 </RelativeLayout>
 ```
 
-You will get TPL Maps loaded successfully in your application.
-> Furthermore, you can view or download our open source [samples project](https://github.com/TPLMaps/TPLMapsAndroidSdkSamples) to get help for more features of SDK.
+You will get FGT Maps loaded successfully in your application.
+> Furthermore, you can view or download our open source [samples project](https://github.com/farsi-geotech/fgt-maps-android-sdk-samples) to get help for more features of SDK.
 
 ### Screenshot
 <p float="left">

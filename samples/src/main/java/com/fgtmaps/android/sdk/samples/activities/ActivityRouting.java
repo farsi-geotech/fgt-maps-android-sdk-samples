@@ -6,10 +6,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.fgt.maps.sdk.routing.IMapRoute;
-import com.fgt.maps.sdk.routing.TPLRouteConfig;
-import com.fgt.maps.sdk.routing.TPLRouteManager;
+import com.fgt.maps.sdk.routing.RouteConfig;
+import com.fgt.maps.sdk.routing.RouteManager;
 import com.fgt.maps.sdk.routing.structures.Place;
-import com.fgt.maps.sdk.routing.structures.TPLRoute;
+import com.fgt.maps.sdk.routing.structures.Route;
 import com.fgt.maps.sdk.routing.structures.TPLRouteDirection;
 import com.fgtmaps.android.sdk.samples.R;
 
@@ -17,14 +17,14 @@ import java.util.ArrayList;
 
 public class ActivityRouting extends AppCompatActivity {
 
-    TPLRouteManager mRouteManager;
+    RouteManager mRouteManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_routing);
 
-        mRouteManager = new TPLRouteManager();
+        mRouteManager = new RouteManager();
     }
 
     public void calculateRoute(View v) {
@@ -47,7 +47,7 @@ public class ActivityRouting extends AppCompatActivity {
         locations.add(destination);
 
         // Building route config
-        TPLRouteConfig config = new TPLRouteConfig.Builder()
+        RouteConfig config = new RouteConfig.Builder()
                 .reRoute(false)
                 .endPoints(locations)
                 .heading(90)
@@ -56,7 +56,7 @@ public class ActivityRouting extends AppCompatActivity {
         // Calling for calculating routes for source and destination locations with config
         mRouteManager.calculate(this, config, new IMapRoute() {
             @Override
-            public void onMapRoutingOverview(ArrayList<Place> endPoints, ArrayList<TPLRoute> routes) {
+            public void onMapRoutingOverview(ArrayList<Place> endPoints, ArrayList<Route> routes) {
                 StringBuilder response;
                 response = new StringBuilder("Start: " + endPoints.get(0).getName()
                         + " (" + endPoints.get(0).getY() +
@@ -66,7 +66,7 @@ public class ActivityRouting extends AppCompatActivity {
                         .append(endPoints.get(1).getX()).append(")\n");
 
                 int routeNo = 0;
-                for (TPLRoute route : routes) {
+                for (Route route : routes) {
                     response.append("\n\nRoute ").append(++routeNo)
                             .append("\nRoute Length (In Meters): ").append(route.getTotalLength())
                             .append("\n").append("Route Time (In Milliseconds): ")

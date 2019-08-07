@@ -37,6 +37,11 @@ public class ActivityCamera extends AppCompatActivity implements MapView.OnMapRe
                 if (mMapView.getMapController() == null)
                     return;
 
+                mMapView.getMapController().setCamera(CameraPosition.builder(mMapView.getMapController())
+                        .position(new LngLat(39.763722, 21.344798))
+                        .tilt(0)
+                        .build());
+
                 // Zoom camera to extent(bounding box) of Mecca City(Saudi Arabia) with animation
                 // BoundingBox needs two location points south-west and north-east respectively
                 // to zoom on an extent
@@ -116,7 +121,7 @@ public class ActivityCamera extends AppCompatActivity implements MapView.OnMapRe
         // Tilted Zoom on Kaaba's location
         mapController.animateCamera(CameraPosition.builder(mapController)
                 .position(new LngLat(39.826185, 21.422509))
-                .zoom(17f)
+                .zoom(15f)
                 .tilt(0.5f)
                 .build(), 2000);
 

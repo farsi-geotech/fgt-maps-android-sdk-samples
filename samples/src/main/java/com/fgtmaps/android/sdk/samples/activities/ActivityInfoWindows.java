@@ -30,7 +30,7 @@ public class ActivityInfoWindows extends AppCompatActivity implements MapView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_windows);
-        mMapView = (MapView) findViewById(R.id.map);
+        mMapView = findViewById(R.id.map);
         MapUtils.initAndLoadMaps(savedInstanceState, mMapView, this);
     }
 
@@ -88,8 +88,8 @@ public class ActivityInfoWindows extends AppCompatActivity implements MapView.On
 
         mMapController = mapController;
 
-        mMapController.setLngLat(new LngLat(73.093104, 33.730494));
-        mMapController.setZoomBy(15);
+        mMapController.setLngLat(new LngLat(39.177918, 21.488987));
+        mMapController.setZoomBy(17);
 
         normalInfoWindows();
         customInfoWindows();
@@ -118,13 +118,12 @@ public class ActivityInfoWindows extends AppCompatActivity implements MapView.On
                                 " precise and accurate location on map");
         mapController.getUiSettings().showZoomControls(true);
         mapController.getUiSettings().showMyLocationButton(true);
-
     }
 
     private void normalInfoWindows() {
 
         final Marker marker1 = mMapController.addMarker(new MarkerOptions()
-                .position(new LngLat(73.093104, 33.730494))
+                .position(new LngLat(39.177468, 21.488169))
                 .title("marker1")
                 .description("This is my spot!").flat(false).order(1));
 
@@ -137,7 +136,7 @@ public class ActivityInfoWindows extends AppCompatActivity implements MapView.On
         marker1.setVisible(false);*/
 
         final Marker marker2 = mMapController.addMarker(new MarkerOptions()
-                .position(new LngLat(73.092159, 33.728945))
+                .position(new LngLat(39.178680, 21.488199))
                 .title("marker2")
                 .description("This is not my spot!").flat(false).order(0)
                 .icon(IconFactory.defaultMarker(IconFactory.YELLOW)));
@@ -170,7 +169,7 @@ public class ActivityInfoWindows extends AppCompatActivity implements MapView.On
         // Set different custom views to different info windows
         normalInfoWindows();
         marker3 = mMapController.addMarker(new MarkerOptions()
-                .position(new LngLat(73.096719, 33.728160)).order(0)
+                .position(new LngLat(39.176813, 21.489097)).order(0)
                 .icon(IconFactory.defaultMarker(IconFactory.GREEN)));
 
         marker3.showInfoWindow();
@@ -182,7 +181,7 @@ public class ActivityInfoWindows extends AppCompatActivity implements MapView.On
         marker3.setVisible(false);*/
 
         marker4 = mMapController.addMarker(new MarkerOptions()
-                .position(new LngLat(73.090947, 33.730283)).order(0)
+                .position(new LngLat(39.178690, 21.488987)).order(0)
                 .icon(IconFactory.defaultMarker(IconFactory.RED)));
 
         marker4.showInfoWindow();

@@ -19,43 +19,50 @@ dependencies {
 ``` xml
 <uses-permission android:name="android.permission.INTERNET" />
 ```
-4. Configure API Key
-   - Create an account on [TPLMaps LBS Portal](https://api.tplmaps.com/apiportal).
-   - Generate Android API Key through [Generate Key](https://api.tplmaps.com/apiportal/#/app/key-generation) option.
-   - Copy the key put it into `<meta-data>` tag mentioned below and copy the tag in your project’s `AndroidManifest.xml` under `<application>` tag
+4. Place the below mentioned `<meta-data>` tag in your project’s `AndroidManifest.xml` under `<application>` tag
 ``` xml
-      <meta-data
-        android:name="com.tplmaps.android.sdk.API_KEY"
-        android:value="YOUR_API_KEY_HERE" />
+<meta-data
+  android:name="com.fgtmaps.android.sdk.API_KEY"
+  android:value="$2a$10$oCE0TfvMYk3vUy021LuAYOppG49khUg9c4mGU3zUflLGRDm8oDwh2" />
 ```
+
+<!--Configure API Key
+ - Create an account on [FGTMaps LBS Portal](https://api.tplmaps.com/apiportal).
+ - Generate Android API Key through [Generate Key](https://api.tplmaps.com/apiportal/#/app/key-generation) option.
+ - Copy the key put it into `<meta-data>` tag mentioned below and copy the tag in your project’s `AndroidManifest.xml` under `<application>` tag
+``` xml
+    <meta-data
+      android:name="com.fgtmaps.android.sdk.API_KEY"
+      android:value="YOUR_API_KEY_HERE" />
+``` -->
 5.	Initialize locations array with source and destination locations
 ``` java
-// Initializing locations array
+// Initializing/preparing source and destination locations array
 ArrayList<Place> locations = new ArrayList<>();
-// Preparing source location
+// Source location
 Place source = new Place();
-source.setName("TPL Corp ISE Office");
-source.setX(73.058382);
-source.setY(33.711556);
-// Preparing destination location
+source.setName("King Abdullah Bin Abdulaziz Square, Jeddah");
+source.setX(39.170069);
+source.setY(21.507161);
+// Destination Location
 Place destination = new Place();
-destination.setName("TPL Maps Bahria Office");
-destination.setX(73.094223);
-destination.setY(33.522695);
-// Adding locations to the array
+destination.setName("Kudy, Makkah, Saudi Arabia");
+destination.setX(39.839409);
+destination.setY(21.390267);
+
 locations.add(source);
 locations.add(destination);
 ```
-6.	Prepare `TPLRouteConfig` object and pass it to `TPLRouteManager.calculate(TPLRouteConfig)` method with necessary arguments as given below, You will get list of **multiple routes** if exist between source & destination locations in `IMapRoute#onMapRoutingOverview(ArrayList<Place> endPoints, ArrayList<TPLRoute> routes)` callback.
+6.	Prepare `RouteConfig` object and pass it to `RouteManager.calculate(RouteConfig)` method with necessary arguments as given below, You will get list of **multiple routes** if exist between source & destination locations in `IMapRoute#onMapRoutingOverview(ArrayList<Place> endPoints, ArrayList<Route> routes)` callback.
 ``` java
-TPLRouteConfig config = new TPLRouteConfig.Builder(false, locations)
+RouteConfig config = new RouteConfig.Builder(false, locations)
         .build();
 
-new TPLRouteManager().calculate(this, config, new IMapRoute() {
+new RouteManager().calculate(this, config, new IMapRoute() {
     @Override
-    public void onMapRoutingOverview(ArrayList<Place> endPoints, ArrayList<TPLRoute>
+    public void onMapRoutingOverview(ArrayList<Place> endPoints, ArrayList<Route>
             routes) {
-         // TODO Use data from ArrayList<TPLRoute> routes
+         // TODO Use data from ArrayList<Route> routes
 }
 });
 ```

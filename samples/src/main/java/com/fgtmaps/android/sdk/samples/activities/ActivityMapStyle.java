@@ -95,7 +95,7 @@ public class ActivityMapStyle extends AppCompatActivity implements MapView.OnMap
         mapController.getUiSettings().showMyLocationButton(true);
         // DEFAULT SETTINGS
         // Zoom to default location
-        mapController.setLngLatZoom(new LngLat(44.428663, 25.007969), 5f);
+        mapController.setLngLatZoom(new LngLat(39.185128, 21.497191), 15f);
         // Setting map max tilt value
         mapController.setMaxTilt(85);
     }

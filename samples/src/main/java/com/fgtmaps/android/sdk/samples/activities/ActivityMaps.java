@@ -26,6 +26,11 @@ public class ActivityMaps extends AppCompatActivity implements MapView.OnMapRead
         mMapView = findViewById(R.id.map);
         mMapView.onCreate(savedInstanceState);
 
+        // If you want to load map with these pre-loading settings/configuration
+        /*mMapView.setMapMode(MapMode.DEFAULT);
+        mMapView.setPOIsEnabled(true);
+        mMapView.setTrafficEnabled(true);*/
+
         // Loading map Asynchronously
         MapUtils.initAndLoadMaps(savedInstanceState, mMapView, this);
     }
