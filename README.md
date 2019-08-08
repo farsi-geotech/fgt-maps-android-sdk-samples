@@ -6,14 +6,14 @@ A Native Android SDK to integrate 3D Vector Maps, Places & Directions API in you
 > The project is tested on Android Studio versions 3.3, 3.3.1 & 3.4.2 - if you have issues building it, please upgrade to one of these versions.
 
 ## Content
-- [Overview](https://github.com/TPLMaps/TPLMapsAndroidSdkSamples#overview)</br>
-- [Features](https://github.com/TPLMaps/TPLMapsAndroidSdkSamples#features)</br>
-- [Screenshot](https://github.com/TPLMaps/TPLMapsAndroidSdkSamples#screenshot)</br>
-- [Sample APK](https://github.com/TPLMaps/TPLMapsAndroidSdkSamples#sample-apk)</br>
-- [Developer Guide](https://github.com/TPLMaps/TPLMapsAndroidSdkSamples#developer-guide)</br>
-- [API Documentation](https://github.com/TPLMaps/TPLMapsAndroidSdkSamples#api-documentation)</br>
-- [Contributor](https://github.com/TPLMaps/TPLMapsAndroidSdkSamples#contributor)</br>
-- [FAQs](https://github.com/TPLMaps/TPLMapsAndroidSdkSamples#faqs) 
+- [Overview](https://github.com/farsi-geotech/fgt-maps-android-sdk-samples#overview)</br>
+- [Features](https://github.com/farsi-geotech/fgt-maps-android-sdk-samples#features)</br>
+- [Screenshot](https://github.com/farsi-geotech/fgt-maps-android-sdk-samples#screenshot)</br>
+- [Sample APK](https://github.com/farsi-geotech/fgt-maps-android-sdk-samples#sample-apk)</br>
+- [Developer Guide](https://github.com/farsi-geotech/fgt-maps-android-sdk-samples#developer-guide)</br>
+- [API Documentation](https://github.com/farsi-geotech/fgt-maps-android-sdk-samples#api-documentation)</br>
+- [Contributor](https://github.com/farsi-geotech/fgt-maps-android-sdk-samples#contributor)</br>
+- [FAQs](https://github.com/farsi-geotech/fgt-maps-android-sdk-samples#faqs) 
 
 ## Features:
 - [**Maps API**](/docs/Maps.md)
@@ -47,7 +47,7 @@ A Native Android SDK to integrate 3D Vector Maps, Places & Directions API in you
 You can find sample debug APK [here](samples/build/outputs/apk/debug/samples-debug.apk)
 
 ### Contributor
-Muhammad Hassan Jamil  (Team Lead Android Development - TPL Maps - hassan.jamil@tplmaps.com)
+Muhammad Hassan Jamil  (Assistant Manager Android Development - TPL Maps - hassan.jamil@tplmaps.com)
 
 ### Developer guide
 You can find a brief developer guide [here] (Link)
