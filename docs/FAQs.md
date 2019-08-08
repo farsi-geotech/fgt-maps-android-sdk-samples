@@ -9,7 +9,7 @@ java.lang.NoClassDefFoundError: Failed resolution of: Lorg/apache/http/ProtocolV
 at com.android.volley.toolbox.HurlStack.performRequest(HurlStack.java:108)
 at com.android.volley.toolbox.BasicNetwork.performRequest(BasicNetwork.java:93)
 at com.android.volley.NetworkDispatcher.run(NetworkDispatcher.java:105)
-Caused by: java.lang.ClassNotFoundException: Didn't find class "org.apache.http.ProtocolVersion" on path: DexPathList[[zip file "/data/app/com.tplmaps.android.sdksamples-oS6o2rN2pC0liRlFuVormg==/base.apk", zip file "/data/app/com.tplmaps.android.sdksamples-...
+Caused by: java.lang.ClassNotFoundException: Didn't find class "org.apache.http.ProtocolVersion" on path: DexPathList[[zip file "/data/app/com.fgtmaps.android.sdksamples-oS6o2rN2pC0liRlFuVormg==/base.apk", zip file "/data/app/com.fgtmaps.android.sdksamples-...
 ```
 ### Solution:
 This is no longer a bug or a workaround, it is required if your app targets API Level 28 (Android 9.0) or above and uses the Google Maps SDK for Android 16.0.0 or below (or if your app uses the Apache HTTP Legacy library). It is now included in the [official docs](https://developers.google.com/maps/documentation/android-sdk/config#specify_requirement_for_apache_http_legacy_library). The public issue has been [closed](https://issuetracker.google.com/issues/79478779#comment11) as intended behavior.

@@ -12,7 +12,7 @@
     <string name="buildings">Buildings</string>
     <string name="pois">POIs</string>
     <string name="map_features_gestures">Map Gestures</string>
-    <string name="search">Search</string>
+    <string name="places">Places</string>
     <string name="search_text">Search Text</string>
     <string name="map_style">Map Style</string>
     <string name="camera">Camera</string>
@@ -35,7 +35,7 @@
     <string name="cancel">Cancel</string>
     <string name="button">Button</string>
     <string name="zoom_camera_to_bounds">Zoom Camera to Bounds</string>
-    <string name="routing">Routing</string>
+    <string name="directions">Directions</string>
     <string name="calculate">Calculate</string>
     <string name="crash_toast_text">Application has been crashed, please send the crash report via mail to the developer to help fix it...</string>
 

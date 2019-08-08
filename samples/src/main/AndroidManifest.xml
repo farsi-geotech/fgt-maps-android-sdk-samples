@@ -54,11 +54,6 @@
             android:label="@string/map_features_gestures"
             android:parentActivityName=".activities.ActivityMain" />
         <activity
-            android:name=".activities.ActivitySearch"
-            android:configChanges="screenSize|orientation"
-            android:label="@string/search"
-            android:parentActivityName=".activities.ActivityMain" />
-        <activity
             android:name=".activities.ActivityMapStyle"
             android:configChanges="screenSize|orientation"
             android:label="@string/map_style"
@@ -74,9 +69,14 @@
             android:label="@string/map_features"
             android:parentActivityName=".activities.ActivityMain" />
         <activity
+            android:name=".activities.ActivitySearch"
+            android:configChanges="screenSize|orientation"
+            android:label="@string/places"
+            android:parentActivityName=".activities.ActivityMain" />
+        <activity
             android:name=".activities.ActivityRouting"
             android:configChanges="screenSize|orientation"
-            android:label="@string/routing"
+            android:label="@string/directions"
             android:parentActivityName=".activities.ActivityMain" />
 
         <meta-data

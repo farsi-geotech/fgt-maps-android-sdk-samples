@@ -49,13 +49,13 @@
             android:id="@+id/btn_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/search" />
+            android:text="@string/places" />
 
         <Button
             android:id="@+id/btn_routing"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/routing" />
+            android:text="@string/directions" />
 
         <Button
             android:id="@+id/btn_shapes"

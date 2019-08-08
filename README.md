@@ -18,9 +18,10 @@ A Native Android SDK to integrate 3D Vector Maps, Places & Directions API in you
 ## Features:
 - [**Maps API**](/docs/Maps.md)
 - [**Places API**](/docs/Places.md)
-- [**Directions API**](/docs/Routing.md)
+- [**Directions API**](/docs/Directions.md)
 
 ### Screenshot
+Maps
 <p float="left">
  <img src="images/screenshots/Maps.png" width="150" />
  <img src="images/screenshots/Map-Features.png" width="150" /> 
@@ -30,6 +31,14 @@ A Native Android SDK to integrate 3D Vector Maps, Places & Directions API in you
  <img src="images/screenshots/Map-Camera.png" width="150" />
  <img src="images/screenshots/Map-Gestures.png" width="150" />
  <img src="images/screenshots/Map-Style.png" width="150" />
+</p>
+Places
+<p float="left">
+ <img src="images/screenshots/Places.png" width="150" />
+</p>
+Directions
+<p float="left">
+ <img src="images/screenshots/Directions.png" width="150" />
 </p>
 
 ### Contributor
