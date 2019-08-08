@@ -21,7 +21,7 @@ A Native Android SDK to integrate 3D Vector Maps, Places & Directions API in you
 - [**Directions API**](/docs/Directions.md)
 
 ### Screenshot
-**Maps**</br>
+**Maps** </br>
 <p float="left">
  <img src="images/screenshots/Maps.png" width="150" />
  <img src="images/screenshots/Map-Features.png" width="150" /> 
@@ -32,11 +32,11 @@ A Native Android SDK to integrate 3D Vector Maps, Places & Directions API in you
  <img src="images/screenshots/Map-Gestures.png" width="150" />
  <img src="images/screenshots/Map-Style.png" width="150" />
 </p>
-**Places**</br>
+**Places** </br>
 <p float="left">
  <img src="images/screenshots/Places.png" width="150" />
 </p>
-**Directions**</br>
+**Directions** </br>
 <p float="left">
  <img src="images/screenshots/Directions.png" width="150" />
 </p>
