@@ -47,7 +47,10 @@ A Native Android SDK to integrate 3D Vector Maps, Places & Directions API in you
 You can find sample debug APK [here](samples/build/outputs/apk/debug/samples-debug.apk)
 
 ### Contributor
-Muhammad Hassan Jamil  (Assistant Manager Android Development - TPL Maps - hassan.jamil@tplmaps.com)
+**Muhammad Hassan Jamil**</br>
+Assistant Manager Android Development</br>
+TPL Maps</br>
+hassan.jamil@tplmaps.com
 
 ### Developer guide
 You can find a brief developer guide [here] (Link)
