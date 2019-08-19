@@ -51,7 +51,7 @@ hassan.jamil@tplmaps.com
 ### Developer guide
 You can find a brief developer guide [here](Link)
 
-## API Documentation
+### API Documentation
 You can find API Documentation from [here](Link)
  
-## [FAQs](/docs/FAQs.md)
+### [FAQs](/docs/FAQs.md)
