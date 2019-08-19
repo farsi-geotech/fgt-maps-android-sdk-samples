@@ -9,7 +9,6 @@ A Native Android SDK to integrate 3D Vector Maps, Places & Directions API in you
 - [Overview](https://github.com/farsi-geotech/fgt-maps-android-sdk-samples#overview)</br>
 - [Features](https://github.com/farsi-geotech/fgt-maps-android-sdk-samples#features)</br>
 - [Screenshot](https://github.com/farsi-geotech/fgt-maps-android-sdk-samples#screenshot)</br>
-- [Sample APK](https://github.com/farsi-geotech/fgt-maps-android-sdk-samples#sample-apk)</br>
 - [Developer Guide](https://github.com/farsi-geotech/fgt-maps-android-sdk-samples#developer-guide)</br>
 - [API Documentation](https://github.com/farsi-geotech/fgt-maps-android-sdk-samples#api-documentation)</br>
 - [Contributor](https://github.com/farsi-geotech/fgt-maps-android-sdk-samples#contributor)</br>
@@ -42,9 +41,6 @@ A Native Android SDK to integrate 3D Vector Maps, Places & Directions API in you
 <p float="left">
  <img src="images/screenshots/Directions.png" width="150" />
 </p>
-
-### Sample APK
-You can find sample debug APK [here](samples/build/outputs/apk/debug/samples-debug.apk)
 
 ### Contributor
 **Muhammad Hassan Jamil**</br>
