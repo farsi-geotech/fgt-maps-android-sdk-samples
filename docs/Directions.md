@@ -19,14 +19,7 @@ dependencies {
 ``` xml
 <uses-permission android:name="android.permission.INTERNET" />
 ```
-4. Place the below mentioned `<meta-data>` tag in your project’s `AndroidManifest.xml` under `<application>` tag
-``` xml
-<meta-data
-  android:name="com.fgtmaps.android.sdk.API_KEY"
-  android:value="$2a$10$oCE0TfvMYk3vUy021LuAYOppG49khUg9c4mGU3zUflLGRDm8oDwh2" />
-```
-
-<!--Configure API Key
+4. Configure API Key
  - Create an account on [FGTMaps LBS Portal](https://api.tplmaps.com/apiportal).
  - Generate Android API Key through [Generate Key](https://api.tplmaps.com/apiportal/#/app/key-generation) option.
  - Copy the key put it into `<meta-data>` tag mentioned below and copy the tag in your project’s `AndroidManifest.xml` under `<application>` tag
@@ -34,7 +27,7 @@ dependencies {
     <meta-data
       android:name="com.fgtmaps.android.sdk.API_KEY"
       android:value="YOUR_API_KEY_HERE" />
-``` -->
+```
 5.	Initialize locations array with source and destination locations
 ``` java
 // Initializing/preparing source and destination locations array
