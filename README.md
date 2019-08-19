@@ -53,7 +53,7 @@ TPL Maps</br>
 hassan.jamil@tplmaps.com
 
 ### Developer guide
-You can find a brief developer guide [here] (Link)
+You can find a brief developer guide [here](Link)
 
 ## API Documentation
 You can find API Documentation from [here](Link)
