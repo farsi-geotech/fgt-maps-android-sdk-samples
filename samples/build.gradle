@@ -29,9 +29,9 @@ repositories {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-     //MAPS: Dependency to utilize Maps API artifact of SDK
+    //MAPS: Dependency to utilize Maps API artifact of SDK
     implementation 'com.fgt.maps.sdk:maps:0.1'
-    //SEARCH/PLACES: Dependency added to utilize Places API artifact of SDK
+    //PLACES: Dependency added to utilize Places API artifact of SDK
     implementation 'com.fgt.maps.sdk:places:0.1'
     //ROUTING: Dependency added to utilize Routing artifact of SDK
     implementation 'com.fgt.maps.sdk:directions:0.1'
