@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!-- ADD THIS CONFIGURATION TO GIVE SUPPORT TO LEGACY HTTP LIBRARY-->
+        <!-- TODO ADD THIS CONFIGURATION TO GIVE SUPPORT TO LEGACY HTTP LIBRARY-->
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
@@ -84,7 +84,7 @@
 
         <meta-data
             android:name="@string/metadata_name_api_key"
-            android:value="$2a$10$oCE0TfvMYk3vUy021LuAYOppG49khUg9c4mGU3zUflLGRDm8oDwh2" />
+            android:value="$2a$10$ZZGSRBhU0T3tEeiAg5O7sukK3YWb8XkAXMdDgJRAVkWGbxSEqkJGa" />
     </application>
 
 </manifest>
