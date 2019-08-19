@@ -49,9 +49,9 @@ TPL Maps</br>
 hassan.jamil@tplmaps.com
 
 ### Developer guide
-You can find a brief developer guide [here](Link)
+You can find a brief developer guide [here](https://db.tt/vBleGLMcjK)
 
 ### API Documentation
-You can find API Documentation from [here](Link)
+You can find API Documentation from [here](https://db.tt/vBleGLMcjK)
  
 ### [FAQs](/docs/FAQs.md)
